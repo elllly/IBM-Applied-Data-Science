@@ -70,6 +70,7 @@ def get_scatter_chart(entered_site, entered_payload):
         x='Payload Mass (kg)', y='class', 
         color='Booster Version Category', 
         title='Correlation between Payload and Success for all Sites')
+        fig.update_xaxes(range=entered_payload)
         return fig
     else:
         filtered_df = filtered_df[filtered_df['Launch Site'] == entered_site]
