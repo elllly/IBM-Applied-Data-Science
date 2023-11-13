@@ -92,9 +92,9 @@ def get_scatter_chart(entered_site, entered_payload):
             x="Payload Mass (kg)",
             y="class",
             color="Booster Version Category",
-            title="Correlation between Payload and Success for all Sites",
-            labels={"x": "Payload Mass (kg)", "y": "Success Rate"},
+            title="Correlation between Payload and Success for all Sites"
         )
+        fig.update_layout(xaxis_title='Payload Mass (kg)', yaxis_title='Success Rate')
         fig.update_xaxes(range=entered_payload)
         return fig
     else:
@@ -106,9 +106,9 @@ def get_scatter_chart(entered_site, entered_payload):
             color="Booster Version Category",
             title="Correlation between Payload and Success for Site {}".format(
                 entered_site
-            ),
-            labels={"x": "Payload Mass (kg)", "y": "Success Rate"},
+            )
         )
+        fig.update_layout(xaxis_title='Payload Mass (kg)', yaxis_title='Success Rate')
         fig.update_xaxes(range=entered_payload)
         return fig
 
